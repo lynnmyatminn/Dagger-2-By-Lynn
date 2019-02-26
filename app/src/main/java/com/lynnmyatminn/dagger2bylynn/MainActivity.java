@@ -7,9 +7,11 @@ import com.lynnmyatminn.dagger2bylynn.Components.DaggerHumanComponent;
 import com.lynnmyatminn.dagger2bylynn.Components.HumanComponent;
 import com.lynnmyatminn.dagger2bylynn.Properties.Human;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Human human;
+    @Inject Human human;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         HumanComponent component = DaggerHumanComponent.create();
+        component.inject(this);
 
-        human = component.getHuman();
         human.speak();
 
     }
