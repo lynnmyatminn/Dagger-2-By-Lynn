@@ -2,9 +2,8 @@ package com.lynnmyatminn.dagger2bylynn.Properties;
 
 import javax.inject.Inject;
 
-public class Head {
+public interface Head {
 
-    @Inject
-    public Head() {
-    }
+    void thinking();
+
 }

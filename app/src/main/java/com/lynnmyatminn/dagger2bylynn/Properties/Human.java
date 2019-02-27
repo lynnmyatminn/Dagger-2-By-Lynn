@@ -22,6 +22,11 @@ public class Human {
         mind.setListener(this);
     }
 
+    public void think() {
+        head.thinking();
+        Log.d(TAG, "thinking...");
+    }
+
     public void speak() {
         Log.d(TAG, "speaking...");
     }

@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         HumanComponent component = DaggerHumanComponent.create();
         component.inject(this);
 
+        human.think();
         human.speak();
 
     }
