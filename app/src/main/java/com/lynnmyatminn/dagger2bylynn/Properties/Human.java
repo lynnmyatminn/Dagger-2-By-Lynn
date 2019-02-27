@@ -17,6 +17,11 @@ public class Human {
         this.legs = legs;
     }
 
+    @Inject
+    public void enableMind(Mind mind) {
+        mind.setListener(this);
+    }
+
     public void speak() {
         Log.d(TAG, "speaking...");
     }
